@@ -1,0 +1,340 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+TableMaker
+</name>
+</assembly>
+<members>
+<member name="T:Psych_Report_Table_Maker.tmDataSet.ScaleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.PersonDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.PersonBatteryDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.PersonBatteryScaleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.DisplayTableMarkerDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.DisplayTableItemMarkerDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.DisplayTableItemDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.RangeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.BatteryDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.RangeLabelDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.ScoreTypeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.DisplayTableItemScoreDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.PersonBatteryAdministrationDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.DisplayTableDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.ReportDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.ReportItemDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.ScaleTypeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.SexDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.ScaleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.PersonRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.PersonBatteryRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.PersonBatteryScaleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.DisplayTableMarkerRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.DisplayTableItemMarkerRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.DisplayTableItemRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.RangeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.BatteryRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.RangeLabelRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.ScoreTypeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.DisplayTableItemScoreRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.PersonBatteryAdministrationRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.DisplayTableRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.ReportRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.ReportItemRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.ScaleTypeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.SexRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.ScaleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.PersonRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.PersonBatteryRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.PersonBatteryScaleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.DisplayTableMarkerRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.DisplayTableItemMarkerRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.DisplayTableItemRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.RangeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.BatteryRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.RangeLabelRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.ScoreTypeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.DisplayTableItemScoreRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.PersonBatteryAdministrationRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.DisplayTableRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.ReportRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.ReportItemRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.ScaleTypeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet.SexRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSetTableAdapters.ScaleTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSetTableAdapters.PersonTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSetTableAdapters.PersonBatteryTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSetTableAdapters.PersonBatteryScaleTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSetTableAdapters.DisplayTableMarkerTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSetTableAdapters.DisplayTableItemMarkerTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSetTableAdapters.DisplayTableItemTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSetTableAdapters.RangeTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSetTableAdapters.BatteryTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSetTableAdapters.RangeLabelTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSetTableAdapters.ScoreTypeTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSetTableAdapters.DisplayTableItemScoreTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSetTableAdapters.PersonBatteryAdministrationTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSetTableAdapters.DisplayTableTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSetTableAdapters.ReportTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSetTableAdapters.ReportItemTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Psych_Report_Table_Maker.tmDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Psych_Report_Table_Maker.tmDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Psych_Report_Table_Maker.tmDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Psych_Report_Table_Maker.tmDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Psych_Report_Table_Maker.tmDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Psych_Report_Table_Maker.tmDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Psych_Report_Table_Maker.tmDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Psych_Report_Table_Maker.tmDataSetTableAdapters.TableAdapterManager.UpdateAll(Psych_Report_Table_Maker.tmDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.tmDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:Psych_Report_Table_Maker.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Psych_Report_Table_Maker.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Psych_Report_Table_Maker.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xrml="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <assemblyIdentity name="TableMaker.application" version="1.0.0.9" publicKeyToken="61b58815251a1045" language="neutral" processorArchitecture="x86" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <description asmv2:publisher="Assessing Psyche" asmv2:product="TableMaker for Psychological Evaluation Reports" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <deployment install="true" mapFileExtensions="true" co.v1:createDesktopShortcut="true">
+    <subscription>
+      <update>
+        <beforeApplicationStartup />
+      </update>
+    </subscription>
+    <deploymentProvider codebase="http://my.ilstu.edu/~wjschne/TableMaker1/TableMaker.application" />
+  </deployment>
+  <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
+    <framework targetVersion="4.0" profile="Client" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
+  </compatibleFrameworks>
+  <dependency>
+    <dependentAssembly dependencyType="install" codebase="Application Files\TableMaker_1_0_0_9\TableMaker.exe.manifest" size="10815">
+      <assemblyIdentity name="TableMaker.exe" version="1.0.0.9" publicKeyToken="61b58815251a1045" language="neutral" processorArchitecture="x86" type="win32" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>8wUdzEuYTlaEMU9HgiRkvmxhdDU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+<publisherIdentity name="CN=JoelHP\wjschne" issuerKeyHash="5b375c18d08384d69f1723ed12b60fdea3e23aea" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>xcOAgsvKERXawA0y8mhJM93P48o=</DigestValue></Reference></SignedInfo><SignatureValue>aTMWP4FfToF8QGWsOLq0VX9jY7+eDzDt+peyNdsPfU6jWu8vPtC7v/M7VuOECRoDcGSsAR1mL9ZXvXXa5e/sjf2B0Y7/7B/AhShf7DQ+rBIBUciyXIWY73AUp4P/QJq70dkvN7MAtMDnlHXoKyZZwC4rfRwO3YTac5ySHAENt2Y=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>t162ltIaa64Qx1S0q08V+WZC94Cn2gwgpq2v1cX8CMO5nWQ0TG0jg5Szn6AsDOdQjFmwVGVCJAiFYW4r70bylCZlQLTkvEyHx7VzAQ6f6zddVzlUTpDRwaGhnUrGn4o/q4IKyZbhMPvVFf15z3E6HyBT2w1PmYtr5lSNMwkwO/8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="cae3cfdd334968f2320dc0da1511cacb8280c3c5" Description="" Url=""><as:assemblyIdentity name="TableMaker.application" version="1.0.0.9" publicKeyToken="61b58815251a1045" language="neutral" processorArchitecture="x86" xmlns="urn:schemas-microsoft-com:asm.v1" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=JoelHP\wjschne</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>lmjegCZwnbSd6IoHkA/jSRFxDB4=</DigestValue></Reference></SignedInfo><SignatureValue>dtr8l5FUqd3oYSX6tJO3ctR9K3PY5kOrkzs7BEwDiOVlC2KMy+na1uHTvj1Ybq1kumBlqJb6PZJ0WIrg6SD1SAaloUTtUZHnRDN3tn8fTgZIpOaITYpVE2mdHgNJdpBT1F6s4wbL4/etUBPeNdjnsEFOJdrHMRzOQ4u17yhoVvY=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>t162ltIaa64Qx1S0q08V+WZC94Cn2gwgpq2v1cX8CMO5nWQ0TG0jg5Szn6AsDOdQjFmwVGVCJAiFYW4r70bylCZlQLTkvEyHx7VzAQ6f6zddVzlUTpDRwaGhnUrGn4o/q4IKyZbhMPvVFf15z3E6HyBT2w1PmYtr5lSNMwkwO/8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQVixLsnS6r4RIZEBdlMmW5zANBgkqhkiG9w0BAQUFADAnMSUwIwYDVQQDHhwASgBvAGUAbABIAFAAXAB3AGoAcwBjAGgAbgBlMB4XDTEyMDExOTA1NDkwNFoXDTEzMDExODExNDkwNFowJzElMCMGA1UEAx4cAEoAbwBlAGwASABQAFwAdwBqAHMAYwBoAG4AZTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAt162ltIaa64Qx1S0q08V+WZC94Cn2gwgpq2v1cX8CMO5nWQ0TG0jg5Szn6AsDOdQjFmwVGVCJAiFYW4r70bylCZlQLTkvEyHx7VzAQ6f6zddVzlUTpDRwaGhnUrGn4o/q4IKyZbhMPvVFf15z3E6HyBT2w1PmYtr5lSNMwkwO/8CAwEAATANBgkqhkiG9w0BAQUFAAOBgQBWrZ9StqLsSjKYJiKVcviyAAkygC7FlJ22qdnH7HTtaKo+EM1ccJgVXIVJMfCCoIYx2RTMae+Sre5ydtRQKRFoACAs8MdmcpzVFa8YbeST7qFNwLbj/buRFZdpB5sxRmYDTXMjqT9yD62+utPaLWcYILpoQCZIoZpskv8jwo3cTA==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

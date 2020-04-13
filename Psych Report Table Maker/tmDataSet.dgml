@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Database" Label="TableMaker.sdf" Category="Database" Group="Expanded" />
+    <Node Id="Battery" Label="Battery" Category="Table" Group="Collapsed" />
+    <Node Id="Battery_BatteryID" Label="BatteryID" Category="Field Primary" Description="int" />
+    <Node Id="Battery_BatteryName" Label="BatteryName" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="Battery_HideBattery" Label="HideBattery" Category="Field Optional" Description="bit" />
+    <Node Id="Battery_Abbreviation" Label="Abbreviation" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="DisplayTable" Label="DisplayTable" Category="Table" Group="Collapsed" />
+    <Node Id="DisplayTable_DisplayTableID" Label="DisplayTableID" Category="Field Primary" Description="int" />
+    <Node Id="DisplayTable_DisplayTableName" Label="DisplayTableName" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="DisplayTable_TableStyleID" Label="TableStyleID" Category="Field Optional" Description="int" />
+    <Node Id="DisplayTable_FirstColumnHeader" Label="FirstColumnHeader" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="DisplayTable_Score" Label="Score" Category="Field Optional" Description="bit" />
+    <Node Id="DisplayTable_Percentile" Label="Percentile" Category="Field Optional" Description="bit" />
+    <Node Id="DisplayTable_Range" Label="Range" Category="Field Optional" Description="bit" />
+    <Node Id="DisplayTable_DisplayTableTitle" Label="DisplayTableTitle" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="DisplayTable_Note" Label="Note" Category="Field Optional" Description="nvarchar(200)" />
+    <Node Id="DisplayTable_RangeID" Label="RangeID" Category="Field Foreign" Description="int" />
+    <Node Id="DisplayTable_Include" Label="Include" Category="Field Optional" Description="bit" />
+    <Node Id="DisplayTable_OrderID" Label="OrderID" Category="Field Optional" Description="int" />
+    <Node Id="DisplayTableItem" Label="DisplayTableItem" Category="Table" Group="Collapsed" />
+    <Node Id="DisplayTableItem_DisplayTableItemID" Label="DisplayTableItemID" Category="Field Primary" Description="int" />
+    <Node Id="DisplayTableItem_DisplayTableID" Label="DisplayTableID" Category="Field Foreign" Description="int" />
+    <Node Id="DisplayTableItem_Size" Label="Size" Category="Field Optional" Description="int" />
+    <Node Id="DisplayTableItem_Italic" Label="Italic" Category="Field Optional" Description="bit" />
+    <Node Id="DisplayTableItem_Bold" Label="Bold" Category="Field Optional" Description="bit" />
+    <Node Id="DisplayTableItem_AllCaps" Label="AllCaps" Category="Field Optional" Description="bit" />
+    <Node Id="DisplayTableItem_Level" Label="Level" Category="Field Optional" Description="int" />
+    <Node Id="DisplayTableItem_ScaleID" Label="ScaleID" Category="Field Foreign" Description="int" />
+    <Node Id="DisplayTableItem_OrderID" Label="OrderID" Category="Field Optional" Description="int" />
+    <Node Id="DisplayTableItem_Abbreviation" Label="Abbreviation" Category="Field Optional" Description="bit" />
+    <Node Id="DisplayTableItemMarker" Label="DisplayTableItemMarker" Category="Table" Group="Collapsed" />
+    <Node Id="DisplayTableItemMarker_DisplayTableItemMarkerID" Label="DisplayTableItemMarkerID" Category="Field Primary" Description="int" />
+    <Node Id="DisplayTableItemMarker_DisplayTableItemID" Label="DisplayTableItemID" Category="Field Foreign" Description="int" />
+    <Node Id="DisplayTableItemMarker_DisplayTableMarkerID" Label="DisplayTableMarkerID" Category="Field Foreign" Description="int" />
+    <Node Id="DisplayTableMarker" Label="DisplayTableMarker" Category="Table" Group="Collapsed" />
+    <Node Id="DisplayTableMarker_DisplayTableMarkerID" Label="DisplayTableMarkerID" Category="Field Primary" Description="int" />
+    <Node Id="DisplayTableMarker_DisplayTableID" Label="DisplayTableID" Category="Field Foreign" Description="int" />
+    <Node Id="DisplayTableMarker_MarkerMeaning" Label="MarkerMeaning" Category="Field Optional" Description="nvarchar(200)" />
+    <Node Id="DisplayTableMarker_MarkerSymbol" Label="MarkerSymbol" Category="Field Optional" Description="nvarchar(10)" />
+    <Node Id="Person" Label="Person" Category="Table" Group="Collapsed" />
+    <Node Id="Person_PersonID" Label="PersonID" Category="Field Primary" Description="int" />
+    <Node Id="Person_FirstName" Label="FirstName" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="Person_LastName" Label="LastName" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="Person_ClientID" Label="ClientID" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="Person_Birthdate" Label="Birthdate" Category="Field Optional" Description="datetime" />
+    <Node Id="Person_Sex" Label="Sex" Category="Field Optional" Description="int" />
+    <Node Id="PersonBattery" Label="PersonBattery" Category="Table" Group="Collapsed" />
+    <Node Id="PersonBattery_PersonBatteryID" Label="PersonBatteryID" Category="Field Primary" Description="int" />
+    <Node Id="PersonBattery_BatteryID" Label="BatteryID" Category="Field Foreign" Description="int" />
+    <Node Id="PersonBattery_PersonID" Label="PersonID" Category="Field Foreign" Description="int" />
+    <Node Id="PersonBattery_AdministrationDate" Label="AdministrationDate" Category="Field Optional" Description="datetime" />
+    <Node Id="PersonBatteryAdministration" Label="PersonBatteryAdministration" Category="Table" Group="Collapsed" />
+    <Node Id="PersonBatteryAdministration_PersonBatteryAdministrationID" Label="PersonBatteryAdministrationID" Category="Field Primary" Description="int" />
+    <Node Id="PersonBatteryAdministration_PersonID" Label="PersonID" Category="Field Foreign" Description="int" />
+    <Node Id="PersonBatteryAdministration_BatteryID" Label="BatteryID" Category="Field Foreign" Description="int" />
+    <Node Id="PersonBatteryAdministration_PersonBatteryID" Label="PersonBatteryID" Category="Field Foreign" Description="int" />
+    <Node Id="PersonBatteryScale" Label="PersonBatteryScale" Category="Table" Group="Collapsed" />
+    <Node Id="PersonBatteryScale_PersonBatteryScaleID" Label="PersonBatteryScaleID" Category="Field Primary" Description="int" />
+    <Node Id="PersonBatteryScale_PersonBatteryID" Label="PersonBatteryID" Category="Field Foreign" Description="int" />
+    <Node Id="PersonBatteryScale_ScaleID" Label="ScaleID" Category="Field Foreign" Description="int" />
+    <Node Id="PersonBatteryScale_Score" Label="Score" Category="Field Optional" Description="numeric(18,0)" />
+    <Node Id="Range" Label="Range" Category="Table" Group="Collapsed" />
+    <Node Id="Range_RangeID" Label="RangeID" Category="Field Primary" Description="int" />
+    <Node Id="Range_RangeName" Label="RangeName" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="RangeLabel" Label="RangeLabel" Category="Table" Group="Collapsed" />
+    <Node Id="RangeLabel_RangeLabelID" Label="RangeLabelID" Category="Field Primary" Description="int" />
+    <Node Id="RangeLabel_RangeLabel" Label="RangeLabel" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="RangeLabel_RangeID" Label="RangeID" Category="Field Foreign" Description="int" />
+    <Node Id="RangeLabel_ScoreTypeID" Label="ScoreTypeID" Category="Field Foreign" Description="int" />
+    <Node Id="RangeLabel_LowerBound" Label="LowerBound" Category="Field Optional" Description="float" />
+    <Node Id="RangeLabel_Upperbound" Label="Upperbound" Category="Field Optional" Description="float" />
+    <Node Id="Report" Label="Report" Category="Table" Group="Collapsed" />
+    <Node Id="Report_ReportID" Label="ReportID" Category="Field Primary" Description="int" />
+    <Node Id="Report_ReportName" Label="ReportName" Category="Field" Description="nvarchar(100)" />
+    <Node Id="ReportItem" Label="ReportItem" Category="Table" Group="Collapsed" />
+    <Node Id="ReportItem_ReportItemID" Label="ReportItemID" Category="Field Primary" Description="int" />
+    <Node Id="ReportItem_ItemText" Label="ItemText" Category="Field" Description="nvarchar(100)" />
+    <Node Id="ReportItem_Type" Label="Type" Category="Field" Description="int" />
+    <Node Id="ReportItem_Font" Label="Font" Category="Field" Description="ntext" />
+    <Node Id="ReportItem_FontSize" Label="FontSize" Category="Field" Description="int" />
+    <Node Id="ReportItem_Indent" Label="Indent" Category="Field" Description="int" />
+    <Node Id="ReportItem_Bold" Label="Bold" Category="Field" Description="bit" />
+    <Node Id="ReportItem_Italic" Label="Italic" Category="Field" Description="bit" />
+    <Node Id="ReportItem_Underline" Label="Underline" Category="Field" Description="bit" />
+    <Node Id="ReportItem_SmallCap" Label="SmallCap" Category="Field" Description="bit" />
+    <Node Id="ReportItem_Color" Label="Color" Category="Field" Description="ntext" />
+    <Node Id="Scale" Label="Scale" Category="Table" Group="Collapsed" />
+    <Node Id="Scale_ScaleID" Label="ScaleID" Category="Field Primary" Description="int" />
+    <Node Id="Scale_ScaleName" Label="ScaleName" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="Scale_BatteryID" Label="BatteryID" Category="Field Foreign" Description="int" />
+    <Node Id="Scale_Level" Label="Level" Category="Field Optional" Description="int" />
+    <Node Id="Scale_OrderID" Label="OrderID" Category="Field Optional" Description="int" />
+    <Node Id="Scale_ScoreTypeID" Label="ScoreTypeID" Category="Field Foreign" Description="int" />
+    <Node Id="ScoreType" Label="ScoreType" Category="Table" Group="Collapsed" />
+    <Node Id="ScoreType_ScoreTypeID" Label="ScoreTypeID" Category="Field Primary" Description="int" />
+    <Node Id="ScoreType_ScoreTypeName" Label="ScoreTypeName" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="ScoreType_Mean" Label="Mean" Category="Field Optional" Description="float" />
+    <Node Id="ScoreType_SD" Label="SD" Category="Field Optional" Description="float" />
+    <Node Id="ScoreType_StandardScore" Label="StandardScore" Category="Field Optional" Description="bit" />
+  </Nodes>
+  <Links>
+    <Link Source="Database" Target="Battery" Category="Contains" />
+    <Link Source="Battery" Target="Battery_BatteryID" Category="Contains" />
+    <Link Source="Battery" Target="Battery_BatteryName" Category="Contains" />
+    <Link Source="Battery" Target="Battery_HideBattery" Category="Contains" />
+    <Link Source="Battery" Target="Battery_Abbreviation" Category="Contains" />
+    <Link Source="Database" Target="DisplayTable" Category="Contains" />
+    <Link Source="DisplayTable" Target="DisplayTable_DisplayTableID" Category="Contains" />
+    <Link Source="DisplayTable" Target="DisplayTable_DisplayTableName" Category="Contains" />
+    <Link Source="DisplayTable" Target="DisplayTable_TableStyleID" Category="Contains" />
+    <Link Source="DisplayTable" Target="DisplayTable_FirstColumnHeader" Category="Contains" />
+    <Link Source="DisplayTable" Target="DisplayTable_Score" Category="Contains" />
+    <Link Source="DisplayTable" Target="DisplayTable_Percentile" Category="Contains" />
+    <Link Source="DisplayTable" Target="DisplayTable_Range" Category="Contains" />
+    <Link Source="DisplayTable" Target="DisplayTable_DisplayTableTitle" Category="Contains" />
+    <Link Source="DisplayTable" Target="DisplayTable_Note" Category="Contains" />
+    <Link Source="DisplayTable" Target="DisplayTable_RangeID" Category="Contains" />
+    <Link Source="DisplayTable" Target="DisplayTable_Include" Category="Contains" />
+    <Link Source="DisplayTable" Target="DisplayTable_OrderID" Category="Contains" />
+    <Link Source="DisplayTable_RangeID" Target="Range_RangeID" Label="RangeDisplayTable" Category="Foreign Key" />
+    <Link Source="Database" Target="DisplayTableItem" Category="Contains" />
+    <Link Source="DisplayTableItem" Target="DisplayTableItem_DisplayTableItemID" Category="Contains" />
+    <Link Source="DisplayTableItem" Target="DisplayTableItem_DisplayTableID" Category="Contains" />
+    <Link Source="DisplayTableItem" Target="DisplayTableItem_Size" Category="Contains" />
+    <Link Source="DisplayTableItem" Target="DisplayTableItem_Italic" Category="Contains" />
+    <Link Source="DisplayTableItem" Target="DisplayTableItem_Bold" Category="Contains" />
+    <Link Source="DisplayTableItem" Target="DisplayTableItem_AllCaps" Category="Contains" />
+    <Link Source="DisplayTableItem" Target="DisplayTableItem_Level" Category="Contains" />
+    <Link Source="DisplayTableItem" Target="DisplayTableItem_ScaleID" Category="Contains" />
+    <Link Source="DisplayTableItem" Target="DisplayTableItem_OrderID" Category="Contains" />
+    <Link Source="DisplayTableItem" Target="DisplayTableItem_Abbreviation" Category="Contains" />
+    <Link Source="DisplayTableItem_DisplayTableID" Target="DisplayTable_DisplayTableID" Label="DisplayTableDisplayTableItem" Category="Foreign Key" />
+    <Link Source="DisplayTableItem_ScaleID" Target="Scale_ScaleID" Label="ScaleDisplayTableItem" Category="Foreign Key" />
+    <Link Source="Database" Target="DisplayTableItemMarker" Category="Contains" />
+    <Link Source="DisplayTableItemMarker" Target="DisplayTableItemMarker_DisplayTableItemMarkerID" Category="Contains" />
+    <Link Source="DisplayTableItemMarker" Target="DisplayTableItemMarker_DisplayTableItemID" Category="Contains" />
+    <Link Source="DisplayTableItemMarker" Target="DisplayTableItemMarker_DisplayTableMarkerID" Category="Contains" />
+    <Link Source="DisplayTableItemMarker_DisplayTableItemID" Target="DisplayTableItem_DisplayTableItemID" Label="DisplayTableItemDisplayTableItemMarker" Category="Foreign Key" />
+    <Link Source="DisplayTableItemMarker_DisplayTableMarkerID" Target="DisplayTableMarker_DisplayTableMarkerID" Label="DisplayTableMarkerDisplayTableItemMarker" Category="Foreign Key" />
+    <Link Source="Database" Target="DisplayTableMarker" Category="Contains" />
+    <Link Source="DisplayTableMarker" Target="DisplayTableMarker_DisplayTableMarkerID" Category="Contains" />
+    <Link Source="DisplayTableMarker" Target="DisplayTableMarker_DisplayTableID" Category="Contains" />
+    <Link Source="DisplayTableMarker" Target="DisplayTableMarker_MarkerMeaning" Category="Contains" />
+    <Link Source="DisplayTableMarker" Target="DisplayTableMarker_MarkerSymbol" Category="Contains" />
+    <Link Source="DisplayTableMarker_DisplayTableID" Target="DisplayTable_DisplayTableID" Label="DisplayTableDisplayTableMarker" Category="Foreign Key" />
+    <Link Source="Database" Target="Person" Category="Contains" />
+    <Link Source="Person" Target="Person_PersonID" Category="Contains" />
+    <Link Source="Person" Target="Person_FirstName" Category="Contains" />
+    <Link Source="Person" Target="Person_LastName" Category="Contains" />
+    <Link Source="Person" Target="Person_ClientID" Category="Contains" />
+    <Link Source="Person" Target="Person_Birthdate" Category="Contains" />
+    <Link Source="Person" Target="Person_Sex" Category="Contains" />
+    <Link Source="Database" Target="PersonBattery" Category="Contains" />
+    <Link Source="PersonBattery" Target="PersonBattery_PersonBatteryID" Category="Contains" />
+    <Link Source="PersonBattery" Target="PersonBattery_BatteryID" Category="Contains" />
+    <Link Source="PersonBattery" Target="PersonBattery_PersonID" Category="Contains" />
+    <Link Source="PersonBattery" Target="PersonBattery_AdministrationDate" Category="Contains" />
+    <Link Source="PersonBattery_BatteryID" Target="Battery_BatteryID" Label="BatteryPersonBattery" Category="Foreign Key" />
+    <Link Source="PersonBattery_PersonID" Target="Person_PersonID" Label="PersonPersonBattery" Category="Foreign Key" />
+    <Link Source="Database" Target="PersonBatteryAdministration" Category="Contains" />
+    <Link Source="PersonBatteryAdministration" Target="PersonBatteryAdministration_PersonBatteryAdministrationID" Category="Contains" />
+    <Link Source="PersonBatteryAdministration" Target="PersonBatteryAdministration_PersonID" Category="Contains" />
+    <Link Source="PersonBatteryAdministration" Target="PersonBatteryAdministration_BatteryID" Category="Contains" />
+    <Link Source="PersonBatteryAdministration" Target="PersonBatteryAdministration_PersonBatteryID" Category="Contains" />
+    <Link Source="PersonBatteryAdministration_BatteryID" Target="Battery_BatteryID" Label="BatteryPersonBatteryAdministration" Category="Foreign Key" />
+    <Link Source="PersonBatteryAdministration_PersonBatteryID" Target="PersonBattery_PersonBatteryID" Label="PersonBatteryPersonBatteryAdministration" Category="Foreign Key" />
+    <Link Source="PersonBatteryAdministration_PersonID" Target="Person_PersonID" Label="PersonPersonBatteryAdministration" Category="Foreign Key" />
+    <Link Source="Database" Target="PersonBatteryScale" Category="Contains" />
+    <Link Source="PersonBatteryScale" Target="PersonBatteryScale_PersonBatteryScaleID" Category="Contains" />
+    <Link Source="PersonBatteryScale" Target="PersonBatteryScale_PersonBatteryID" Category="Contains" />
+    <Link Source="PersonBatteryScale" Target="PersonBatteryScale_ScaleID" Category="Contains" />
+    <Link Source="PersonBatteryScale" Target="PersonBatteryScale_Score" Category="Contains" />
+    <Link Source="PersonBatteryScale_PersonBatteryID" Target="PersonBattery_PersonBatteryID" Label="PersonBatteryPersonBatteryScale" Category="Foreign Key" />
+    <Link Source="PersonBatteryScale_ScaleID" Target="Scale_ScaleID" Label="ScalePersonBatteryScale" Category="Foreign Key" />
+    <Link Source="Database" Target="Range" Category="Contains" />
+    <Link Source="Range" Target="Range_RangeID" Category="Contains" />
+    <Link Source="Range" Target="Range_RangeName" Category="Contains" />
+    <Link Source="Database" Target="RangeLabel" Category="Contains" />
+    <Link Source="RangeLabel" Target="RangeLabel_RangeLabelID" Category="Contains" />
+    <Link Source="RangeLabel" Target="RangeLabel_RangeLabel" Category="Contains" />
+    <Link Source="RangeLabel" Target="RangeLabel_RangeID" Category="Contains" />
+    <Link Source="RangeLabel" Target="RangeLabel_ScoreTypeID" Category="Contains" />
+    <Link Source="RangeLabel" Target="RangeLabel_LowerBound" Category="Contains" />
+    <Link Source="RangeLabel" Target="RangeLabel_Upperbound" Category="Contains" />
+    <Link Source="RangeLabel_RangeID" Target="Range_RangeID" Label="RangeRangeLabel" Category="Foreign Key" />
+    <Link Source="RangeLabel_ScoreTypeID" Target="ScoreType_ScoreTypeID" Label="ScoreTypeRangeLabel" Category="Foreign Key" />
+    <Link Source="Database" Target="Report" Category="Contains" />
+    <Link Source="Report" Target="Report_ReportID" Category="Contains" />
+    <Link Source="Report" Target="Report_ReportName" Category="Contains" />
+    <Link Source="Database" Target="ReportItem" Category="Contains" />
+    <Link Source="ReportItem" Target="ReportItem_ReportItemID" Category="Contains" />
+    <Link Source="ReportItem" Target="ReportItem_ItemText" Category="Contains" />
+    <Link Source="ReportItem" Target="ReportItem_Type" Category="Contains" />
+    <Link Source="ReportItem" Target="ReportItem_Font" Category="Contains" />
+    <Link Source="ReportItem" Target="ReportItem_FontSize" Category="Contains" />
+    <Link Source="ReportItem" Target="ReportItem_Indent" Category="Contains" />
+    <Link Source="ReportItem" Target="ReportItem_Bold" Category="Contains" />
+    <Link Source="ReportItem" Target="ReportItem_Italic" Category="Contains" />
+    <Link Source="ReportItem" Target="ReportItem_Underline" Category="Contains" />
+    <Link Source="ReportItem" Target="ReportItem_SmallCap" Category="Contains" />
+    <Link Source="ReportItem" Target="ReportItem_Color" Category="Contains" />
+    <Link Source="Database" Target="Scale" Category="Contains" />
+    <Link Source="Scale" Target="Scale_ScaleID" Category="Contains" />
+    <Link Source="Scale" Target="Scale_ScaleName" Category="Contains" />
+    <Link Source="Scale" Target="Scale_BatteryID" Category="Contains" />
+    <Link Source="Scale" Target="Scale_Level" Category="Contains" />
+    <Link Source="Scale" Target="Scale_OrderID" Category="Contains" />
+    <Link Source="Scale" Target="Scale_ScoreTypeID" Category="Contains" />
+    <Link Source="Scale_BatteryID" Target="Battery_BatteryID" Label="BatteryScale" Category="Foreign Key" />
+    <Link Source="Scale_ScoreTypeID" Target="ScoreType_ScoreTypeID" Label="ScoreTypeScale" Category="Foreign Key" />
+    <Link Source="Database" Target="ScoreType" Category="Contains" />
+    <Link Source="ScoreType" Target="ScoreType_ScoreTypeID" Category="Contains" />
+    <Link Source="ScoreType" Target="ScoreType_ScoreTypeName" Category="Contains" />
+    <Link Source="ScoreType" Target="ScoreType_Mean" Category="Contains" />
+    <Link Source="ScoreType" Target="ScoreType_SD" Category="Contains" />
+    <Link Source="ScoreType" Target="ScoreType_StandardScore" Category="Contains" />
+  </Links>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Table" ValueLabel="True">
+      <Condition Expression="HasCategory('Table')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Schema" ValueLabel="True">
+      <Condition Expression="HasCategory('Schema')" />
+      <Setter Property="Background" Value="#FF7F9169" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field" ValueLabel="True">
+      <Condition Expression="HasCategory('Field')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Database" ValueLabel="True">
+      <Condition Expression="HasCategory('Database')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+</DirectedGraph>
