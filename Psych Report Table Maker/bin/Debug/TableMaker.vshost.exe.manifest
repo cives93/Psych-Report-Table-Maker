@@ -115,14 +115,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TableMaker.exe" size="773632">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TableMaker.exe" size="779264">
       <assemblyIdentity name="TableMaker" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>WIsxY3Ud1tu1AqTWHtUf5YCPt/Q=</dsig:DigestValue>
+        <dsig:DigestValue>n0zyTda0BAVrfwy5UUOktOfOZME=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -156,13 +156,13 @@
       <dsig:DigestValue>4kOsgdvmvYbxWOUw6ctLLXoGJls=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="TableMaker.sdf" size="786432" writeableType="applicationData">
+  <file name="TableMaker.sdf" size="851968" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>mFuk+mFV9TW9COg/1s/y8bbdz0U=</dsig:DigestValue>
+      <dsig:DigestValue>+5TxS8jNNq7x7F0jvyzmuw0WAyA=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

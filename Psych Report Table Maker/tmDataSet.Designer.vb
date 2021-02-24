@@ -3000,6 +3000,12 @@ Partial Public Class tmDataSet
         
         Private columnAbbreviation As Global.System.Data.DataColumn
         
+        Private columnBorderAbove As Global.System.Data.DataColumn
+        
+        Private columnBorderBelow As Global.System.Data.DataColumn
+        
+        Private columnFillColor As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -3133,6 +3139,30 @@ Partial Public Class tmDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property BorderAboveColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnBorderAbove
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property BorderBelowColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnBorderBelow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FillColorColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFillColor
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -3169,9 +3199,9 @@ Partial Public Class tmDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddDisplayTableItemRow(ByVal parentDisplayTableRowByDisplayTableDisplayTableItem As DisplayTableRow, ByVal Size As Integer, ByVal Italic As Boolean, ByVal Bold As Boolean, ByVal AllCaps As Boolean, ByVal Level As Integer, ByVal parentScaleRowByScaleDisplayTableItem As ScaleRow, ByVal OrderID As Integer, ByVal ScaleName As String, ByVal Abbreviation As Boolean) As DisplayTableItemRow
+        Public Overloads Function AddDisplayTableItemRow(ByVal parentDisplayTableRowByDisplayTableDisplayTableItem As DisplayTableRow, ByVal Size As Integer, ByVal Italic As Boolean, ByVal Bold As Boolean, ByVal AllCaps As Boolean, ByVal Level As Integer, ByVal parentScaleRowByScaleDisplayTableItem As ScaleRow, ByVal OrderID As Integer, ByVal ScaleName As String, ByVal Abbreviation As Boolean, ByVal BorderAbove As Boolean, ByVal BorderBelow As Boolean, ByVal FillColor As String) As DisplayTableItemRow
             Dim rowDisplayTableItemRow As DisplayTableItemRow = CType(Me.NewRow,DisplayTableItemRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Size, Italic, Bold, AllCaps, Level, Nothing, OrderID, ScaleName, Abbreviation}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Size, Italic, Bold, AllCaps, Level, Nothing, OrderID, ScaleName, Abbreviation, BorderAbove, BorderBelow, FillColor}
             If (Not (parentDisplayTableRowByDisplayTableDisplayTableItem) Is Nothing) Then
                 columnValuesArray(1) = parentDisplayTableRowByDisplayTableDisplayTableItem(0)
             End If
@@ -3185,9 +3215,9 @@ Partial Public Class tmDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddDisplayTableItemRow(ByVal parentDisplayTableRowByDisplayTableDisplayTableItem As DisplayTableRow, ByVal Size As Integer, ByVal Italic As Boolean, ByVal Bold As Boolean, ByVal AllCaps As Boolean, ByVal Level As Integer, ByVal parentScaleRowByScaleDisplayTableItem As ScaleRow, ByVal OrderID As Integer, ByVal Abbreviation As Boolean) As DisplayTableItemRow
+        Public Overloads Function AddDisplayTableItemRow(ByVal parentDisplayTableRowByDisplayTableDisplayTableItem As DisplayTableRow, ByVal Size As Integer, ByVal Italic As Boolean, ByVal Bold As Boolean, ByVal AllCaps As Boolean, ByVal Level As Integer, ByVal parentScaleRowByScaleDisplayTableItem As ScaleRow, ByVal OrderID As Integer, ByVal Abbreviation As Boolean, ByVal BorderAbove As Boolean, ByVal BorderBelow As Boolean, ByVal FillColor As String) As DisplayTableItemRow
             Dim rowDisplayTableItemRow As DisplayTableItemRow = CType(Me.NewRow,DisplayTableItemRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Size, Italic, Bold, AllCaps, Level, Nothing, OrderID, Nothing, Abbreviation}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Size, Italic, Bold, AllCaps, Level, Nothing, OrderID, Nothing, Abbreviation, BorderAbove, BorderBelow, FillColor}
             If (Not (parentDisplayTableRowByDisplayTableDisplayTableItem) Is Nothing) Then
                 columnValuesArray(1) = parentDisplayTableRowByDisplayTableDisplayTableItem(0)
             End If
@@ -3233,6 +3263,9 @@ Partial Public Class tmDataSet
             Me.columnOrderID = MyBase.Columns("OrderID")
             Me.columnScaleName = MyBase.Columns("ScaleName")
             Me.columnAbbreviation = MyBase.Columns("Abbreviation")
+            Me.columnBorderAbove = MyBase.Columns("BorderAbove")
+            Me.columnBorderBelow = MyBase.Columns("BorderBelow")
+            Me.columnFillColor = MyBase.Columns("FillColor")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3260,6 +3293,12 @@ Partial Public Class tmDataSet
             MyBase.Columns.Add(Me.columnScaleName)
             Me.columnAbbreviation = New Global.System.Data.DataColumn("Abbreviation", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnAbbreviation)
+            Me.columnBorderAbove = New Global.System.Data.DataColumn("BorderAbove", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnBorderAbove)
+            Me.columnBorderBelow = New Global.System.Data.DataColumn("BorderBelow", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnBorderBelow)
+            Me.columnFillColor = New Global.System.Data.DataColumn("FillColor", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFillColor)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnDisplayTableItemID}, true))
             Me.columnDisplayTableItemID.AutoIncrement = true
             Me.columnDisplayTableItemID.AutoIncrementSeed = -1
@@ -3268,6 +3307,7 @@ Partial Public Class tmDataSet
             Me.columnDisplayTableItemID.ReadOnly = true
             Me.columnDisplayTableItemID.Unique = true
             Me.columnScaleName.ReadOnly = true
+            Me.columnFillColor.MaxLength = 100
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8241,6 +8281,51 @@ Partial Public Class tmDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property BorderAbove() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tableDisplayTableItem.BorderAboveColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'BorderAbove' in table 'DisplayTableItem' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableDisplayTableItem.BorderAboveColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property BorderBelow() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tableDisplayTableItem.BorderBelowColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'BorderBelow' in table 'DisplayTableItem' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableDisplayTableItem.BorderBelowColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FillColor() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableDisplayTableItem.FillColorColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'FillColor' in table 'DisplayTableItem' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableDisplayTableItem.FillColorColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property ScaleRow() As ScaleRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("ScaleDisplayTableItem")),ScaleRow)
@@ -8379,6 +8464,42 @@ Partial Public Class tmDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetAbbreviationNull()
             Me(Me.tableDisplayTableItem.AbbreviationColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsBorderAboveNull() As Boolean
+            Return Me.IsNull(Me.tableDisplayTableItem.BorderAboveColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetBorderAboveNull()
+            Me(Me.tableDisplayTableItem.BorderAboveColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsBorderBelowNull() As Boolean
+            Return Me.IsNull(Me.tableDisplayTableItem.BorderBelowColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetBorderBelowNull()
+            Me(Me.tableDisplayTableItem.BorderBelowColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFillColorNull() As Boolean
+            Return Me.IsNull(Me.tableDisplayTableItem.FillColorColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFillColorNull()
+            Me(Me.tableDisplayTableItem.FillColorColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -13013,43 +13134,56 @@ Namespace tmDataSetTableAdapters
             tableMapping.ColumnMappings.Add("ScaleID", "ScaleID")
             tableMapping.ColumnMappings.Add("OrderID", "OrderID")
             tableMapping.ColumnMappings.Add("Abbreviation", "Abbreviation")
+            tableMapping.ColumnMappings.Add("BorderAbove", "BorderAbove")
+            tableMapping.ColumnMappings.Add("BorderBelow", "BorderBelow")
+            tableMapping.ColumnMappings.Add("FillColor", "FillColor")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlServerCe.SqlCeCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [DisplayTableItem] WHERE (([DisplayTableItemID] = @p1))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [DisplayTableItem] WHERE (([DisplayTableItemID] = @Original_DisplayTa"& _ 
+                "bleItemID))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "DisplayTableItemID", Global.System.Data.DataRowVersion.Original, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Original_DisplayTableItemID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "DisplayTableItemID", Global.System.Data.DataRowVersion.Original, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.SqlServerCe.SqlCeCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [DisplayTableItem] ([DisplayTableID], [Size], [Italic], [Bold], [AllC"& _ 
-                "aps], [Level], [ScaleID], [OrderID], [Abbreviation]) VALUES (@p1, @p2, @p3, @p4,"& _ 
-                " @p5, @p6, @p7, @p8, @p9)"
+                "aps], [Level], [ScaleID], [OrderID], [Abbreviation], [BorderAbove], [BorderBelow"& _ 
+                "], [FillColor]) VALUES (@DisplayTableID, @Size, @Italic, @Bold, @AllCaps, @Level"& _ 
+                ", @ScaleID, @OrderID, @Abbreviation, @BorderAbove, @BorderBelow, @FillColor)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "DisplayTableID", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Size", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Italic", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p4", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Bold", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p5", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "AllCaps", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p6", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Level", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p7", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "ScaleID", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p8", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "OrderID", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p9", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Abbreviation", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@DisplayTableID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "DisplayTableID", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Size", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Size", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Italic", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Italic", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Bold", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Bold", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@AllCaps", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "AllCaps", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Level", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Level", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@ScaleID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "ScaleID", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@OrderID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "OrderID", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Abbreviation", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Abbreviation", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@BorderAbove", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "BorderAbove", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@BorderBelow", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "BorderBelow", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@FillColor", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "FillColor", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlServerCe.SqlCeCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [DisplayTableItem] SET [DisplayTableID] = @p1, [Size] = @p2, [Italic] = @p"& _ 
-                "3, [Bold] = @p4, [AllCaps] = @p5, [Level] = @p6, [ScaleID] = @p7, [OrderID] = @p"& _ 
-                "8, [Abbreviation] = @p9 WHERE (([DisplayTableItemID] = @p10))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [DisplayTableItem] SET [DisplayTableID] = @DisplayTableID, [Size] = @Size,"& _ 
+                " [Italic] = @Italic, [Bold] = @Bold, [AllCaps] = @AllCaps, [Level] = @Level, [Sc"& _ 
+                "aleID] = @ScaleID, [OrderID] = @OrderID, [Abbreviation] = @Abbreviation, [Border"& _ 
+                "Above] = @BorderAbove, [BorderBelow] = @BorderBelow, [FillColor] = @FillColor WH"& _ 
+                "ERE (([DisplayTableItemID] = @Original_DisplayTableItemID))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "DisplayTableID", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Size", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Italic", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p4", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Bold", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p5", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "AllCaps", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p6", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Level", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p7", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "ScaleID", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p8", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "OrderID", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p9", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Abbreviation", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p10", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "DisplayTableItemID", Global.System.Data.DataRowVersion.Original, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@DisplayTableID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "DisplayTableID", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Size", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Size", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Italic", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Italic", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Bold", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Bold", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@AllCaps", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "AllCaps", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Level", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Level", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@ScaleID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "ScaleID", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@OrderID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "OrderID", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Abbreviation", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Abbreviation", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@BorderAbove", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "BorderAbove", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@BorderBelow", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "BorderBelow", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@FillColor", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "FillColor", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Original_DisplayTableItemID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "DisplayTableItemID", Global.System.Data.DataRowVersion.Original, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -13066,16 +13200,17 @@ Namespace tmDataSetTableAdapters
             Me._commandCollection(0) = New Global.System.Data.SqlServerCe.SqlCeCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        DisplayTableItemID, DisplayTableID, Size, Italic, Bold, AllCaps, Le"& _ 
-                "vel, ScaleID, OrderID, Abbreviation"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            DisplayTableItem"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY "& _ 
-                "OrderID"
+                "vel, ScaleID, OrderID, Abbreviation, BorderAbove, BorderBelow, FillColor"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM  "& _ 
+                "          DisplayTableItem"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY OrderID"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlServerCe.SqlCeCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT Abbreviation, AllCaps, Bold, DisplayTableID, DisplayTableItemID, Italic, L"& _ 
-                "evel, OrderID, ScaleID, Size FROM DisplayTableItem WHERE (DisplayTableItemID = @"& _ 
-                "pDisplayTableItem)"
+            Me._commandCollection(1).CommandText = "SELECT        Abbreviation, AllCaps, Bold, BorderAbove, BorderBelow, DisplayTable"& _ 
+                "ID, DisplayTableItemID, FillColor, Italic, Level, OrderID, ScaleID, Size"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM  "& _ 
+                "          DisplayTableItem"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (DisplayTableItemID = @pDisplayTableIte"& _ 
+                "m)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@pDisplayTableItem", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, true, 0, 0, "DisplayTableItemID", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@pDisplayTableItem", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "DisplayTableItemID", Global.System.Data.DataRowVersion.Current, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -13137,8 +13272,8 @@ Namespace tmDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal p1 As Integer) As Integer
-            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(p1,Integer)
+        Public Overloads Overridable Function Delete(ByVal Original_DisplayTableItemID As Integer) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_DisplayTableItemID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -13158,51 +13293,66 @@ Namespace tmDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal p1 As Global.System.Nullable(Of Integer), ByVal p2 As Global.System.Nullable(Of Integer), ByVal p3 As Global.System.Nullable(Of Boolean), ByVal p4 As Global.System.Nullable(Of Boolean), ByVal p5 As Global.System.Nullable(Of Boolean), ByVal p6 As Global.System.Nullable(Of Integer), ByVal p7 As Global.System.Nullable(Of Integer), ByVal p8 As Global.System.Nullable(Of Integer), ByVal p9 As Global.System.Nullable(Of Boolean)) As Integer
-            If (p1.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(p1.Value,Integer)
+        Public Overloads Overridable Function Insert(ByVal DisplayTableID As Global.System.Nullable(Of Integer), ByVal Size As Global.System.Nullable(Of Integer), ByVal Italic As Global.System.Nullable(Of Boolean), ByVal Bold As Global.System.Nullable(Of Boolean), ByVal AllCaps As Global.System.Nullable(Of Boolean), ByVal Level As Global.System.Nullable(Of Integer), ByVal ScaleID As Global.System.Nullable(Of Integer), ByVal OrderID As Global.System.Nullable(Of Integer), ByVal Abbreviation As Global.System.Nullable(Of Boolean), ByVal BorderAbove As Global.System.Nullable(Of Boolean), ByVal BorderBelow As Global.System.Nullable(Of Boolean), ByVal FillColor As String) As Integer
+            If (DisplayTableID.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(DisplayTableID.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             End If
-            If (p2.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(p2.Value,Integer)
+            If (Size.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(Size.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
             End If
-            If (p3.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(p3.Value,Boolean)
+            If (Italic.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Italic.Value,Boolean)
             Else
                 Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
             End If
-            If (p4.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(p4.Value,Boolean)
+            If (Bold.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Bold.Value,Boolean)
             Else
                 Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
-            If (p5.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(p5.Value,Boolean)
+            If (AllCaps.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(AllCaps.Value,Boolean)
             Else
                 Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            If (p6.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(p6.Value,Integer)
+            If (Level.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Level.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
             End If
-            If (p7.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(p7.Value,Integer)
+            If (ScaleID.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(ScaleID.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
             End If
-            If (p8.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(p8.Value,Integer)
+            If (OrderID.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(OrderID.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
             End If
-            If (p9.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(8).Value = CType(p9.Value,Boolean)
+            If (Abbreviation.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(Abbreviation.Value,Boolean)
             Else
                 Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (BorderAbove.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(BorderAbove.Value,Boolean)
+            Else
+                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            If (BorderBelow.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(10).Value = CType(BorderBelow.Value,Boolean)
+            Else
+                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
+            End If
+            If (FillColor Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(11).Value = CType(FillColor,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -13223,53 +13373,68 @@ Namespace tmDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal p1 As Global.System.Nullable(Of Integer), ByVal p2 As Global.System.Nullable(Of Integer), ByVal p3 As Global.System.Nullable(Of Boolean), ByVal p4 As Global.System.Nullable(Of Boolean), ByVal p5 As Global.System.Nullable(Of Boolean), ByVal p6 As Global.System.Nullable(Of Integer), ByVal p7 As Global.System.Nullable(Of Integer), ByVal p8 As Global.System.Nullable(Of Integer), ByVal p9 As Global.System.Nullable(Of Boolean), ByVal p10 As Integer) As Integer
-            If (p1.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(p1.Value,Integer)
+        Public Overloads Overridable Function Update(ByVal DisplayTableID As Global.System.Nullable(Of Integer), ByVal Size As Global.System.Nullable(Of Integer), ByVal Italic As Global.System.Nullable(Of Boolean), ByVal Bold As Global.System.Nullable(Of Boolean), ByVal AllCaps As Global.System.Nullable(Of Boolean), ByVal Level As Global.System.Nullable(Of Integer), ByVal ScaleID As Global.System.Nullable(Of Integer), ByVal OrderID As Global.System.Nullable(Of Integer), ByVal Abbreviation As Global.System.Nullable(Of Boolean), ByVal BorderAbove As Global.System.Nullable(Of Boolean), ByVal BorderBelow As Global.System.Nullable(Of Boolean), ByVal FillColor As String, ByVal Original_DisplayTableItemID As Integer) As Integer
+            If (DisplayTableID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(DisplayTableID.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             End If
-            If (p2.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(p2.Value,Integer)
+            If (Size.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Size.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             End If
-            If (p3.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(p3.Value,Boolean)
+            If (Italic.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Italic.Value,Boolean)
             Else
                 Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
             End If
-            If (p4.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(p4.Value,Boolean)
+            If (Bold.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Bold.Value,Boolean)
             Else
                 Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
-            If (p5.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(p5.Value,Boolean)
+            If (AllCaps.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(AllCaps.Value,Boolean)
             Else
                 Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            If (p6.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(p6.Value,Integer)
+            If (Level.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Level.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
             End If
-            If (p7.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(p7.Value,Integer)
+            If (ScaleID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(ScaleID.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
             End If
-            If (p8.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(p8.Value,Integer)
+            If (OrderID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(OrderID.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             End If
-            If (p9.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(p9.Value,Boolean)
+            If (Abbreviation.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Abbreviation.Value,Boolean)
             Else
                 Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(p10,Integer)
+            If (BorderAbove.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(BorderAbove.Value,Boolean)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            If (BorderBelow.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(BorderBelow.Value,Boolean)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            End If
+            If (FillColor Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(FillColor,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_DisplayTableItemID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then

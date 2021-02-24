@@ -106,7 +106,6 @@ C:\Users\renee\Dropbox\Programs\Psych Report Table Maker\Psych Report Table Make
 C:\Users\renee\Dropbox\Programs\Psych Report Table Maker\Psych Report Table Maker\obj\x86\Debug\TableMaker.exe
 C:\Users\renee\Dropbox\Programs\Psych Report Table Maker\Psych Report Table Maker\obj\x86\Debug\TableMaker.xml
 C:\Users\renee\Dropbox\Programs\Psych Report Table Maker\Psych Report Table Maker\obj\x86\Debug\TableMaker.pdb
-C:\Users\renee\Dropbox\Programs\Psych Report Table Maker\Psych Report Table Maker\obj\x86\Debug\Psych Report Table Maker.vbprojResolveAssemblyReference.cache
 C:\Users\renee\Dropbox\Programs\Psych Report Table Maker\Psych Report Table Maker\obj\x86\Debug\Psych_Report_Table_Maker.AddBattery.resources
 C:\Users\renee\Dropbox\Programs\Psych Report Table Maker\Psych Report Table Maker\obj\x86\Debug\Psych_Report_Table_Maker.AddDisplayTable.resources
 C:\Users\renee\Dropbox\Programs\Psych Report Table Maker\Psych Report Table Maker\obj\x86\Debug\Psych_Report_Table_Maker.AddDisplayTableMarker.resources
@@ -138,3 +137,7 @@ C:\Users\renee\Dropbox\Programs\Psych Report Table Maker\Psych Report Table Make
 C:\Users\renee\Dropbox\Programs\Psych Report Table Maker\Psych Report Table Maker\bin\Debug\MathNet.Numerics.xml
 C:\Users\renee\Dropbox\Programs\Psych Report Table Maker\Psych Report Table Maker\obj\x86\Debug\TableMaker.exe.manifest
 C:\Users\renee\Dropbox\Programs\Psych Report Table Maker\Psych Report Table Maker\obj\x86\Debug\TableMaker.application
+C:\Users\renee\Dropbox\Programs\Psych Report Table Maker\Psych Report Table Maker\obj\x86\Debug\Psych Report Table Maker.vbprojAssemblyReference.cache
+C:\Users\renee\Dropbox\Programs\Psych Report Table Maker\Psych Report Table Maker\obj\x86\Debug\Psych Report Table Maker.vbproj.CoreCompileInputs.cache
+C:\Users\renee\Dropbox\Programs\Psych Report Table Maker\Psych Report Table Maker\bin\Debug\WindowsBase.dll
+C:\Users\renee\Dropbox\Programs\Psych Report Table Maker\Psych Report Table Maker\obj\x86\Debug\Psych Report Table Maker.vbproj.CopyComplete

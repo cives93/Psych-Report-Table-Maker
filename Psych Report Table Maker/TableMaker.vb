@@ -786,10 +786,10 @@ Public Class TableMaker
                 cmd.Connection.Open()
             End If
             If idti Is Nothing Then
-                DisplayTableItemTableAdapter.Insert(dt.DisplayTableID, 12, False, False, False, intLevel, sc.ScaleID, Nothing, False)
+                DisplayTableItemTableAdapter.Insert(dt.DisplayTableID, 12, False, False, False, intLevel, sc.ScaleID, Nothing, False, False, False, "white")
             Else
                 InsertAfterID = idti.OrderID
-                DisplayTableItemTableAdapter.Insert(dt.DisplayTableID, idti.Size, idti.Italic, idti.Bold, idti.AllCaps, idti.Level, sc.ScaleID, Nothing, idti.Abbreviation)
+                DisplayTableItemTableAdapter.Insert(dt.DisplayTableID, idti.Size, idti.Italic, idti.Bold, idti.AllCaps, idti.Level, sc.ScaleID, Nothing, idti.Abbreviation, idti.BorderAbove, idti.BorderBelow, idti.FillColor)
             End If
 
             Dim id As Integer = CInt(cmd.ExecuteScalar())
@@ -921,6 +921,14 @@ Public Class TableMaker
                             dr.DefaultCellStyle.Font = New System.Drawing.Font(DisplayTableItemDataGridView.DefaultCellStyle.Font.FontFamily, CSng(dti.Size), FontStyle.Regular)
                         End If
                     End If
+                    If dti.IsBorderAboveNull Then
+                        dti.BorderAbove = False
+                    End If
+
+                    If dti.IsBorderBelowNull Then
+                        dti.BorderBelow = False
+                    End If
+
                     If dti.IsScaleNameNull = False Then
                         If dti.AllCaps Then
                             dr.Cells("Marker").Value = dti.ScaleName.ToUpper
@@ -1615,11 +1623,9 @@ Public Class TableMaker
                                                                {.ParagraphPropertiesDefault = New ParagraphPropertiesDefault With _
                                                                                               {.ParagraphPropertiesBaseStyle = New ParagraphPropertiesBaseStyle With _
                                                                                                {.PageBreakBefore = New PageBreakBefore() With {.Val = False}, _
-                                                                                                .Justification = New Justification With _
-                                                                                                                                               {.Val = JustificationValues.Left}, _
-                                                                                                                                .SpacingBetweenLines = New SpacingBetweenLines With _
-                                                                                                                                                      {.After = CType(0, StringValue), _
-                                                                                                                                                       .Before = CType(0, StringValue), _
+                                                                                                .Justification = New Justification With {.Val = JustificationValues.Left}, _
+                                                                                                .SpacingBetweenLines = New SpacingBetweenLines With {.After = CType(0, StringValue), _
+                                                                                                                                                     .Before = CType(0, StringValue), _
                                                                                                                                                        .Line = CType(240, StringValue), _
                                                                                                                                                        .LineRule = LineSpacingRuleValues.Auto}}}}}
 
@@ -1763,11 +1769,11 @@ Public Class TableMaker
                                     Dim tblprop As New TableProperties With {.TableBorders = New TableBorders( _
                                                                                   New TopBorder With {.Val = New EnumValue(Of BorderValues)(BorderValues.Single), .Size = 8}, _
                                                                                   New BottomBorder With {.Val = New EnumValue(Of BorderValues)(BorderValues.Single), .Size = 8}, _
-                                                                                  New LeftBorder With {.Val = New EnumValue(Of BorderValues)(BorderValues.Single), .Size = 8}, _
-                                                                                  New RightBorder With {.Val = New EnumValue(Of BorderValues)(BorderValues.Single), .Size = 8}, _
-                                                                                  New InsideHorizontalBorder With {.Val = New EnumValue(Of BorderValues)(BorderValues.Single), .Size = 8}, _
-                                                                                  New InsideVerticalBorder With {.Val = New EnumValue(Of BorderValues)(BorderValues.Single), .Size = 8}) _
-                                                                             }
+                                                                                  New LeftBorder With {.Val = New EnumValue(Of BorderValues)(BorderValues.Nil), .Size = 8}, _
+                                                                                  New RightBorder With {.Val = New EnumValue(Of BorderValues)(BorderValues.Nil), .Size = 8}, _
+                                                                                  New InsideHorizontalBorder With {.Val = New EnumValue(Of BorderValues)(BorderValues.Nil), .Size = 8}, _
+                                                                                  New InsideVerticalBorder With {.Val = New EnumValue(Of BorderValues)(BorderValues.Nil), .Size = 8}), _
+                                                                             .TableWidth = New TableWidth With {.Width = "5000"}}
 
 
 
@@ -1801,11 +1807,8 @@ Public Class TableMaker
                                     Dim tc1 As New TableCell
                                     tc1.TableCellProperties = New TableCellProperties With _
                                                               {.TableCellBorders = New TableCellBorders With _
-                                                                                   {.LeftBorder = New LeftBorder With {.Val = BorderValues.Nil}, _
-                                                                                    .RightBorder = New RightBorder With {.Val = BorderValues.Nil}, _
-                                                                                    .TopBorder = New TopBorder With {.Val = BorderValues.Nil}, _
-                                                                                    .InsideHorizontalBorder = New InsideHorizontalBorder With {.Val = BorderValues.Nil},
-                                                                                    .InsideVerticalBorder = New InsideVerticalBorder With {.Val = BorderValues.Nil}}}
+                                                                                   {.TopBorder = New TopBorder With {.Val = BorderValues.Single}, _
+                                                                                    .BottomBorder = New BottomBorder With {.Val = BorderValues.Single}}}
                                     Dim p As New Paragraph
                                     ApplyStyleToParagraph(wordDocument, "b1i0fs12Ind0JL", "b1i0fs12Ind0JL", p, True, False, 12, 0, JustificationValues.Left)
                                     Dim r As New Run
@@ -1822,12 +1825,9 @@ Public Class TableMaker
                                     If dt.Score Then
                                         tc1 = New TableCell
                                         tc1.TableCellProperties = New TableCellProperties With _
-                                              {.TableCellBorders = New TableCellBorders With _
-                                                                   {.LeftBorder = New LeftBorder With {.Val = BorderValues.Nil}, _
-                                                                    .RightBorder = New RightBorder With {.Val = BorderValues.Nil}, _
-                                                                    .TopBorder = New TopBorder With {.Val = BorderValues.Nil}, _
-                                                                    .InsideHorizontalBorder = New InsideHorizontalBorder With {.Val = BorderValues.Nil},
-                                                                    .InsideVerticalBorder = New InsideVerticalBorder With {.Val = BorderValues.Nil}}}
+                                                              {.TableCellBorders = New TableCellBorders With _
+                                                                                   {.TopBorder = New TopBorder With {.Val = BorderValues.Single}, _
+                                                                                    .BottomBorder = New BottomBorder With {.Val = BorderValues.Single}}}
 
                                         p = New Paragraph
                                         ApplyStyleToParagraph(wordDocument, "b1i0fs12Ind0JC", "b1i0fs12Ind0JC", p, True, False, 12, 0, JustificationValues.Center)
@@ -1841,12 +1841,9 @@ Public Class TableMaker
                                     If dt.Percentile Then
                                         tc1 = New TableCell
                                         tc1.TableCellProperties = New TableCellProperties With _
-                                              {.TableCellBorders = New TableCellBorders With _
-                                                                   {.LeftBorder = New LeftBorder With {.Val = BorderValues.Nil}, _
-                                                                    .RightBorder = New RightBorder With {.Val = BorderValues.Nil}, _
-                                                                    .TopBorder = New TopBorder With {.Val = BorderValues.Nil}, _
-                                                                    .InsideHorizontalBorder = New InsideHorizontalBorder With {.Val = BorderValues.Nil},
-                                                                    .InsideVerticalBorder = New InsideVerticalBorder With {.Val = BorderValues.Nil}}}
+                                                              {.TableCellBorders = New TableCellBorders With _
+                                                                                   {.TopBorder = New TopBorder With {.Val = BorderValues.Single}, _
+                                                                                    .BottomBorder = New BottomBorder With {.Val = BorderValues.Single}}}
 
                                         p = New Paragraph
                                         ApplyStyleToParagraph(wordDocument, "b1i0fs12Ind0JC", "b1i0fs12Ind0JC", p, True, False, 12, 0, JustificationValues.Center)
@@ -1860,12 +1857,9 @@ Public Class TableMaker
                                     If dt.Range Then
                                         tc1 = New TableCell
                                         tc1.TableCellProperties = New TableCellProperties With _
-                                              {.TableCellBorders = New TableCellBorders With _
-                                                                   {.LeftBorder = New LeftBorder With {.Val = BorderValues.Nil}, _
-                                                                    .RightBorder = New RightBorder With {.Val = BorderValues.Nil}, _
-                                                                    .TopBorder = New TopBorder With {.Val = BorderValues.Nil}, _
-                                                                    .InsideHorizontalBorder = New InsideHorizontalBorder With {.Val = BorderValues.Nil},
-                                                                    .InsideVerticalBorder = New InsideVerticalBorder With {.Val = BorderValues.Nil}}}
+                                                              {.TableCellBorders = New TableCellBorders With _
+                                                                                   {.TopBorder = New TopBorder With {.Val = BorderValues.Single}, _
+                                                                                    .BottomBorder = New BottomBorder With {.Val = BorderValues.Single}}}
 
                                         p = New Paragraph
                                         ApplyStyleToParagraph(wordDocument, "b1i0fs12Ind0JC", "b1i0fs12Ind0JC", p, True, False, 12, 0, JustificationValues.Center)
@@ -1883,6 +1877,28 @@ Public Class TableMaker
                                         Dim dgvr As DataGridViewRow = DisplayTableItemDataGridView.Rows(rowIndex)
                                         tr = New TableRow
                                         tc1 = New TableCell
+                                        Dim bborder As DocumentFormat.OpenXml.EnumValue(Of DocumentFormat.OpenXml.Wordprocessing.BorderValues)
+                                        Dim tborder As DocumentFormat.OpenXml.EnumValue(Of DocumentFormat.OpenXml.Wordprocessing.BorderValues)
+                                        If dtir.BorderBelow Then
+                                            bborder = BorderValues.Single
+
+                                        Else
+                                            bborder = BorderValues.Nil
+
+                                        End If
+
+                                        If dtir.BorderAbove Then
+                                            tborder = BorderValues.Single
+                                        Else
+                                            tborder = BorderValues.Nil
+                                        End If
+
+                                        tc1.TableCellProperties = New TableCellProperties With _
+                                              {.TableCellBorders = New TableCellBorders With _
+                                                                   {.TopBorder = New TopBorder With {.Val = tborder}, _
+                                                                    .BottomBorder = New BottomBorder With {.Val = bborder}}}
+
+
                                         p = New Paragraph
                                         strParagraphStyle = "b"
                                         If dtir.Bold Then
@@ -1909,6 +1925,10 @@ Public Class TableMaker
                                         tr.Append(tc1)
                                         If dt.Score Then
                                             tc1 = New TableCell
+                                            tc1.TableCellProperties = New TableCellProperties With _
+                                              {.TableCellBorders = New TableCellBorders With _
+                                                                   {.TopBorder = New TopBorder With {.Val = tborder}, _
+                                                                    .BottomBorder = New BottomBorder With {.Val = bborder}}}
                                             p = New Paragraph
                                             ApplyStyleToParagraph(wordDocument, strParagraphStyle & "Ind0JC", strParagraphStyle & "Ind0JC", p, dtir.Bold, dtir.Italic, dtir.Size, 0, JustificationValues.Center)
                                             r = New Run
@@ -1920,6 +1940,10 @@ Public Class TableMaker
                                         End If
                                         If dt.Percentile Then
                                             tc1 = New TableCell
+                                            tc1.TableCellProperties = New TableCellProperties With _
+                                              {.TableCellBorders = New TableCellBorders With _
+                                                                   {.TopBorder = New TopBorder With {.Val = tborder}, _
+                                                                    .BottomBorder = New BottomBorder With {.Val = bborder}}}
                                             p = New Paragraph
                                             ApplyStyleToParagraph(wordDocument, strParagraphStyle & "Ind0JC", strParagraphStyle & "Ind0JC", p, dtir.Bold, dtir.Italic, dtir.Size, 0, JustificationValues.Center)
                                             r = New Run
@@ -1931,6 +1955,10 @@ Public Class TableMaker
                                         End If
                                         If dt.Range Then
                                             tc1 = New TableCell
+                                            tc1.TableCellProperties = New TableCellProperties With _
+                                              {.TableCellBorders = New TableCellBorders With _
+                                                                   {.TopBorder = New TopBorder With {.Val = tborder}, _
+                                                                    .BottomBorder = New BottomBorder With {.Val = bborder}}}
                                             p = New Paragraph
                                             ApplyStyleToParagraph(wordDocument, strParagraphStyle & "Ind0JC", strParagraphStyle & "Ind0JC", p, dtir.Bold, dtir.Italic, dtir.Size, 0, JustificationValues.Center)
                                             r = New Run
@@ -2429,4 +2457,6 @@ Public Class TableMaker
         FormatDisplay()
         FormatDisplayItem()
     End Sub
+
+
 End Class

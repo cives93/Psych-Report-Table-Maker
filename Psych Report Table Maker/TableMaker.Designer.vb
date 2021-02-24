@@ -109,8 +109,9 @@ Partial Class TableMaker
         Me.DisplayTableDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Hide = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.cbxAbbreviation = New System.Windows.Forms.CheckBox()
+        Me.BorderAboveCheckBox = New System.Windows.Forms.CheckBox()
         Me.DisplayTableItemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.cbxAbbreviation = New System.Windows.Forms.CheckBox()
         Me.btnMakeTable = New System.Windows.Forms.Button()
         Me.RangeNameComboBox = New System.Windows.Forms.ComboBox()
         Me.RangeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -188,6 +189,8 @@ Partial Class TableMaker
         Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Upperbound = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RangeLabelBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.tpConstruct = New System.Windows.Forms.TabPage()
+        Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.tpImportExport = New System.Windows.Forms.TabPage()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnImportData = New System.Windows.Forms.Button()
@@ -233,8 +236,7 @@ Partial Class TableMaker
         Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SplitContainer10 = New System.Windows.Forms.SplitContainer()
-        Me.tpConstruct = New System.Windows.Forms.TabPage()
-        Me.TreeView1 = New System.Windows.Forms.TreeView()
+        Me.BottomBorderCheckBox = New System.Windows.Forms.CheckBox()
         FirstColumnHeaderLabel = New System.Windows.Forms.Label()
         DisplayTableTitleLabel = New System.Windows.Forms.Label()
         NoteLabel = New System.Windows.Forms.Label()
@@ -319,6 +321,7 @@ Partial Class TableMaker
         CType(Me.ScoreTypeDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RangeLabelDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RangeLabelBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tpConstruct.SuspendLayout()
         Me.tpImportExport.SuspendLayout()
         CType(Me.PersonBatteryAdministrationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DisplayTableItemScoreBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -332,7 +335,6 @@ Partial Class TableMaker
         Me.SplitContainer10.Panel1.SuspendLayout()
         Me.SplitContainer10.Panel2.SuspendLayout()
         Me.SplitContainer10.SuspendLayout()
-        Me.tpConstruct.SuspendLayout()
         Me.SuspendLayout()
         '
         'FirstColumnHeaderLabel
@@ -816,6 +818,8 @@ Partial Class TableMaker
         'SplitContainer8.Panel2
         '
         Me.SplitContainer8.Panel2.AutoScroll = True
+        Me.SplitContainer8.Panel2.Controls.Add(Me.BottomBorderCheckBox)
+        Me.SplitContainer8.Panel2.Controls.Add(Me.BorderAboveCheckBox)
         Me.SplitContainer8.Panel2.Controls.Add(Me.cbxAbbreviation)
         Me.SplitContainer8.Panel2.Controls.Add(Me.btnMakeTable)
         Me.SplitContainer8.Panel2.Controls.Add(Label2)
@@ -1039,6 +1043,23 @@ Partial Class TableMaker
         Me.Hide.Name = "Hide"
         Me.Hide.Width = 41
         '
+        'BorderAboveCheckBox
+        '
+        Me.BorderAboveCheckBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.BorderAboveCheckBox.AutoSize = True
+        Me.BorderAboveCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.DisplayTableItemBindingSource, "BorderAbove", True))
+        Me.BorderAboveCheckBox.Location = New System.Drawing.Point(6, 406)
+        Me.BorderAboveCheckBox.Name = "BorderAboveCheckBox"
+        Me.BorderAboveCheckBox.Size = New System.Drawing.Size(93, 21)
+        Me.BorderAboveCheckBox.TabIndex = 51
+        Me.BorderAboveCheckBox.Text = "Top Border"
+        Me.BorderAboveCheckBox.UseVisualStyleBackColor = True
+        '
+        'DisplayTableItemBindingSource
+        '
+        Me.DisplayTableItemBindingSource.DataMember = "DisplayTableDisplayTableItem"
+        Me.DisplayTableItemBindingSource.DataSource = Me.DisplayTableBindingSource
+        '
         'cbxAbbreviation
         '
         Me.cbxAbbreviation.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
@@ -1050,11 +1071,6 @@ Partial Class TableMaker
         Me.cbxAbbreviation.TabIndex = 50
         Me.cbxAbbreviation.Text = "Test Name"
         Me.cbxAbbreviation.UseVisualStyleBackColor = True
-        '
-        'DisplayTableItemBindingSource
-        '
-        Me.DisplayTableItemBindingSource.DataMember = "DisplayTableDisplayTableItem"
-        Me.DisplayTableItemBindingSource.DataSource = Me.DisplayTableBindingSource
         '
         'btnMakeTable
         '
@@ -1117,7 +1133,7 @@ Partial Class TableMaker
         Me.cbxAllCaps.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.cbxAllCaps.AutoSize = True
         Me.cbxAllCaps.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.DisplayTableItemBindingSource, "AllCaps", True))
-        Me.cbxAllCaps.Location = New System.Drawing.Point(68, 409)
+        Me.cbxAllCaps.Location = New System.Drawing.Point(69, 433)
         Me.cbxAllCaps.Name = "cbxAllCaps"
         Me.cbxAllCaps.Size = New System.Drawing.Size(74, 21)
         Me.cbxAllCaps.TabIndex = 44
@@ -1227,7 +1243,7 @@ Partial Class TableMaker
         Me.BoldCheckBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.BoldCheckBox.AutoSize = True
         Me.BoldCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.DisplayTableItemBindingSource, "Bold", True))
-        Me.BoldCheckBox.Location = New System.Drawing.Point(6, 409)
+        Me.BoldCheckBox.Location = New System.Drawing.Point(6, 433)
         Me.BoldCheckBox.Name = "BoldCheckBox"
         Me.BoldCheckBox.Size = New System.Drawing.Size(53, 21)
         Me.BoldCheckBox.TabIndex = 16
@@ -1964,6 +1980,24 @@ Partial Class TableMaker
         Me.RangeLabelBindingSource.DataMember = "RangeRangeLabel"
         Me.RangeLabelBindingSource.DataSource = Me.RangeBindingSource
         '
+        'tpConstruct
+        '
+        Me.tpConstruct.BackColor = System.Drawing.SystemColors.Control
+        Me.tpConstruct.Controls.Add(Me.TreeView1)
+        Me.tpConstruct.Location = New System.Drawing.Point(4, 26)
+        Me.tpConstruct.Name = "tpConstruct"
+        Me.tpConstruct.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpConstruct.Size = New System.Drawing.Size(814, 540)
+        Me.tpConstruct.TabIndex = 6
+        Me.tpConstruct.Text = "Constructs"
+        '
+        'TreeView1
+        '
+        Me.TreeView1.Location = New System.Drawing.Point(51, 67)
+        Me.TreeView1.Name = "TreeView1"
+        Me.TreeView1.Size = New System.Drawing.Size(430, 266)
+        Me.TreeView1.TabIndex = 0
+        '
         'tpImportExport
         '
         Me.tpImportExport.Controls.Add(Me.Label3)
@@ -2129,7 +2163,7 @@ Partial Class TableMaker
         Me.ReportDataGridView.Location = New System.Drawing.Point(3, 3)
         Me.ReportDataGridView.Name = "ReportDataGridView"
         Me.ReportDataGridView.RowTemplate.Height = 24
-        Me.ReportDataGridView.Size = New System.Drawing.Size(1151, 438)
+        Me.ReportDataGridView.Size = New System.Drawing.Size(1341, 436)
         Me.ReportDataGridView.TabIndex = 0
         '
         'DataGridViewTextBoxColumn16
@@ -2265,23 +2299,17 @@ Partial Class TableMaker
         Me.SplitContainer10.SplitterDistance = 204
         Me.SplitContainer10.TabIndex = 1
         '
-        'tpConstruct
+        'BottomBorderCheckBox
         '
-        Me.tpConstruct.BackColor = System.Drawing.SystemColors.Control
-        Me.tpConstruct.Controls.Add(Me.TreeView1)
-        Me.tpConstruct.Location = New System.Drawing.Point(4, 26)
-        Me.tpConstruct.Name = "tpConstruct"
-        Me.tpConstruct.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpConstruct.Size = New System.Drawing.Size(814, 540)
-        Me.tpConstruct.TabIndex = 6
-        Me.tpConstruct.Text = "Constructs"
-        '
-        'TreeView1
-        '
-        Me.TreeView1.Location = New System.Drawing.Point(51, 67)
-        Me.TreeView1.Name = "TreeView1"
-        Me.TreeView1.Size = New System.Drawing.Size(430, 266)
-        Me.TreeView1.TabIndex = 0
+        Me.BottomBorderCheckBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.BottomBorderCheckBox.AutoSize = True
+        Me.BottomBorderCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.DisplayTableItemBindingSource, "BorderBelow", True))
+        Me.BottomBorderCheckBox.Location = New System.Drawing.Point(98, 406)
+        Me.BottomBorderCheckBox.Name = "BottomBorderCheckBox"
+        Me.BottomBorderCheckBox.Size = New System.Drawing.Size(69, 21)
+        Me.BottomBorderCheckBox.TabIndex = 52
+        Me.BottomBorderCheckBox.Text = "Bottom"
+        Me.BottomBorderCheckBox.UseVisualStyleBackColor = True
         '
         'TableMaker
         '
@@ -2375,6 +2403,7 @@ Partial Class TableMaker
         CType(Me.ScoreTypeDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RangeLabelDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RangeLabelBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tpConstruct.ResumeLayout(False)
         Me.tpImportExport.ResumeLayout(False)
         CType(Me.PersonBatteryAdministrationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DisplayTableItemScoreBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2388,7 +2417,6 @@ Partial Class TableMaker
         Me.SplitContainer10.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer10, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer10.ResumeLayout(False)
-        Me.tpConstruct.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -2573,5 +2601,7 @@ Partial Class TableMaker
     Friend WithEvents HideBattery As System.Windows.Forms.DataGridViewCheckBoxColumn
     Friend WithEvents tpConstruct As System.Windows.Forms.TabPage
     Friend WithEvents TreeView1 As System.Windows.Forms.TreeView
+    Friend WithEvents BorderAboveCheckBox As System.Windows.Forms.CheckBox
+    Friend WithEvents BottomBorderCheckBox As System.Windows.Forms.CheckBox
 
 End Class
