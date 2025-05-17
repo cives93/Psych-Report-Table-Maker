@@ -3,6 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Psych Report Table Maker</title>
+</head>
+<body>
+  <h1>Psych Report Table Maker</h1>
+  <form id="add-form">
+    <input type="text" id="name" placeholder="Name" required />
+    <button type="submit">Add Person</button>
+  </form>
+  <div id="status"></div>
+  <script>
+    const { invoke } = window.__TAURI__;
+    document.getElementById('add-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      try {
+        await invoke('add_person', { person: { name } });
+        document.getElementById('status').textContent = 'Added ' + name;
+      } catch (err) {
+        document.getElementById('status').textContent = 'Error: ' + err;
+      }
   <script src="https://unpkg.com/@tauri-apps/api/tauri.js"></script>
 </head>
 <body>

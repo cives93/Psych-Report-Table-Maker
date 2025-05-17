@@ -1,29 +1,43 @@
-// use tauri::Manager; removed
-// use rusqlite::Result; removed
-
-mod db;
-use db::{add_person, init_db, NewPerson};
-
-const DB_PATH: &str = "table_maker.db";
+use tauri::Manager;
+use rusqlite::{Connection, params, Result};
+use serde::Deserialize;
 
 #[tauri::command]
-fn add_person_command(person: NewPerson) -> std::result::Result<i64, String> {
-    add_person(DB_PATH, person).map_err(|e| e.to_string())
-}
-
-#[tauri::command]
-fn generate_report() -> std::result::Result<String, String> {
+fn generate_report() -> Result<String> {
     // TODO: Implement report generation using docx-rs
     Ok("Report generated".into())
 }
 
+fn init_db() -> Result<Connection> {
+    let conn = Connection::open("table_maker.db")?;
+    conn.execute(
+        "CREATE TABLE IF NOT EXISTS people (
+            id INTEGER PRIMARY KEY,
+            name TEXT NOT NULL
+        )",
+        [],
+    )?;
+    Ok(conn)
+}
+
+#[derive(Deserialize)]
+struct NewPerson {
+    name: String,
+}
+
+#[tauri::command]
+fn add_person(person: NewPerson) -> Result<()> {
+    let conn = init_db()?;
+    conn.execute("INSERT INTO people (name) VALUES (?1)", params![person.name])?;
+    Ok(())
 fn main() {
     tauri::Builder::default()
-        .setup(|_app| {
-            init_db(DB_PATH).expect("failed to init db");
+        .setup(|app| {
+            // Initialize SQLite database on startup
+            let _conn = init_db().expect("failed to init db");
             Ok(())
         })
-        .invoke_handler(tauri::generate_handler![add_person_command, generate_report])
+        .invoke_handler(tauri::generate_handler![generate_report, add_person])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
