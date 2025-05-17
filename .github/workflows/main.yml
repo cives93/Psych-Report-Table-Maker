@@ -20,9 +20,8 @@ jobs:
 
       - name: Move unzipped files
         run: |
-          # If you want to move the files to src-tauri/, adjust as needed
-          rm -rf src-tauri # Remove old (if you want to replace)
-          mv src-tauri-unzipped src-tauri
+          rm -rf tauri-app/src-tauri
+          mv tauri-app/src-tauri-unzipped tauri-app/src-tauri
 
       - name: Commit and push changes
         env:
