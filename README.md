@@ -38,4 +38,7 @@ npm run tauri build -- --target aarch64-apple-darwin
 
 ### Porting Status
 
+
 The Tauri project now includes a basic `add_person` command backed by SQLite and a simple HTML form to invoke it. Additional VB.NET features still need to be migrated.
+=======
+Only a minimal Rust backend and SQLite setup are included. The original VB.NET logic and UI must still be translated into Rust commands and a web-based UI.
