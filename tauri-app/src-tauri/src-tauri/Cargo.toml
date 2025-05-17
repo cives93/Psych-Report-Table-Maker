@@ -1,0 +1,16 @@
+[package]
+name    = "your_crate_name"    # not "src-tauri" unless that’s really your binary name
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rusqlite = "0.29"                     # your SQLite driver
+clap     = { version = "4", features = ["derive"] }
+
+[dev-dependencies]
+assert_cmd = "2.0"     # run your CLI commands & inspect output
+assert_fs  = "1.0"     # create temp dirs/files for tests
+predicates = "2.1"     # expressive assertions on strings/files
+mockito    = "0.31"    # spin up a local HTTP mock server
+insta      = "1.27"    # snapshot testing (stores files locally)
+tempfile   = "3.3"     # quick temp‐file creation
