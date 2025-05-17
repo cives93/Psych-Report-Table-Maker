@@ -30,8 +30,6 @@ fn add_person(person: NewPerson) -> Result<()> {
     let conn = init_db()?;
     conn.execute("INSERT INTO people (name) VALUES (?1)", params![person.name])?;
     Ok(())
-}
-
 fn main() {
     tauri::Builder::default()
         .setup(|app| {

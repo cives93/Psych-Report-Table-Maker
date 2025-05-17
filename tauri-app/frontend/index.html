@@ -22,6 +22,46 @@
       } catch (err) {
         document.getElementById('status').textContent = 'Error: ' + err;
       }
+  <script src="https://unpkg.com/@tauri-apps/api/tauri.js"></script>
+</head>
+<body>
+  <h1>Psych Report Table Maker</h1>
+  <form id="person-form">
+    <label>First Name: <input id="first" /></label><br />
+    <label>Last Name: <input id="last" /></label><br />
+    <label>Client ID: <input id="client" /></label><br />
+    <label>Birthdate: <input id="birth" type="date" /></label><br />
+    <label>Sex:
+      <select id="sex">
+        <option value="0">Male</option>
+        <option value="1">Female</option>
+      </select>
+    </label><br />
+    <button type="submit">Add Person</button>
+  </form>
+  <pre id="output"></pre>
+  <script>
+    const { invoke } = window.__TAURI__.tauri;
+
+    document.getElementById('person-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const person = {
+        first_name: document.getElementById('first').value,
+        last_name: document.getElementById('last').value,
+        client_id: document.getElementById('client').value || null,
+        birthdate: document.getElementById('birth').value,
+        sex: parseInt(document.getElementById('sex').value)
+      };
+      try {
+        const id = await invoke('add_person_command', { person });
+        document.getElementById('output').innerText = `Added person with id ${id}`;
+      } catch (err) {
+        document.getElementById('output').innerText = `Error: ${err}`;
+      }
+  <div id="app"></div>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('app').innerText = 'Tauri app placeholder';
     });
   </script>
 </body>

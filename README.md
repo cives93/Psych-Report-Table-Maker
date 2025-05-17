@@ -17,6 +17,7 @@ This repository originally contained a VB.NET Windows Forms application that rel
 
 The `tauri-app` directory contains a Tauri project that will eventually replace the VB.NET application. It uses SQLite for data storage and will generate Word documents via the `docx-rs` crate.
 
+
 ### Prerequisites
 
 - [Rust](https://rustup.rs/) with the stable toolchain.
@@ -44,3 +45,12 @@ The backend currently exposes two commands:
 * `generate_report` – placeholder for upcoming document generation.
 
 A small form in `frontend/index.html` calls `add_person` to demonstrate database access. The rest of the VB.NET functionality remains to be ported.
+
+### Offline Testing
+
+The Rust backend includes unit tests that run without network access. Run them from the `tauri-app/src-tauri` directory:
+
+```bash
+cargo test --offline
+```
+
