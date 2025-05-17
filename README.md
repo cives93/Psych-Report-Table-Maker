@@ -15,7 +15,7 @@ This repository originally contained a VB.NET Windows Forms application that rel
 
 ## New Tauri + Rust Project
 
-The `tauri-app` directory contains a skeleton Tauri project intended to replace the VB.NET application. It uses SQLite for data storage and will generate Word documents via the `docx-rs` crate.
+The `tauri-app` directory contains a Tauri project intended to replace the VB.NET application. It uses SQLite for data storage and will generate Word documents via the `docx-rs` crate.
 
 ### Prerequisites
 
@@ -38,7 +38,14 @@ npm run tauri build -- --target aarch64-apple-darwin
 
 ### Porting Status
 
+The Rust backend now supports adding people to an SQLite database via the `add_person_command`. Document generation and other VB.NET features are still TODO.
+
+### Offline Testing
+
+The Rust backend includes unit tests that run without network access. Run them from the `tauri-app/src-tauri` directory:
+
+```bash
+cargo test --offline
+```
 
 The Tauri project now includes a basic `add_person` command backed by SQLite and a simple HTML form to invoke it. Additional VB.NET features still need to be migrated.
-=======
-Only a minimal Rust backend and SQLite setup are included. The original VB.NET logic and UI must still be translated into Rust commands and a web-based UI.
