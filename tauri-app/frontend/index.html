@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Psych Report Table Maker</title>
+</head>
+<body>
+  <h1>Psych Report Table Maker</h1>
+  <div>
+    <label>Name: <input id="name" type="text" /></label>
+    <button id="add">Add Person</button>
+  </div>
+  <script src="https://unpkg.com/@tauri-apps/api/tauri.js"></script>
+  <script>
+    document.getElementById('add').addEventListener('click', async () => {
+      const name = document.getElementById('name').value;
+      await window.__TAURI__.invoke('add_person_command', { name });
+      alert('Person added');
+    });
+  </script>
+</body>
+</html>
