@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Psych Report Table Maker</title>
+</head>
+<body>
+  <h1>Psych Report Table Maker</h1>
+  <form id="person-form">
+    <label>First Name <input type="text" id="first" /></label><br/>
+    <label>Last Name <input type="text" id="last" required/></label><br/>
+    <button type="submit">Add Person</button>
+  </form>
+  <div id="status"></div>
+  <script>
+    const { invoke } = window.__TAURI__.tauri;
+    document.getElementById('person-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const first = document.getElementById('first').value;
+      const last = document.getElementById('last').value;
+      try {
+        await invoke('add_person', { person: { first_name: first, last_name: last } });
+        document.getElementById('status').innerText = 'Person added';
+      } catch (err) {
+        document.getElementById('status').innerText = 'Error adding person';
+      }
+    });
+  </script>
+</body>
+</html>
