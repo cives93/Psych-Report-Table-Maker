@@ -47,3 +47,5 @@ The Rust backend includes unit tests that run without network access. Run them f
 ```bash
 cargo test --offline
 ```
+
+The Tauri project now includes a basic `add_person` command backed by SQLite and a simple HTML form to invoke it. Additional VB.NET features still need to be migrated.
